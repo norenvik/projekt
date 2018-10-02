@@ -1,6 +1,14 @@
 print('něco')
-if 1 < 2:
-    print('stop')
-vstup = input('Zadej číslo: ')
-try:
-    cislo = int(vstup)
+
+while True:
+    vstup = input('Zadej číslo: ')
+    try:
+        cislo = int(vstup)
+        vysledek = 100 / cislo
+    except (ValueError, ZeroDivisionError):
+        print('ČÍSLO!!!')
+    else:
+        print(vysledek)
+        nasobek = vstup * 3
+        print(nasobek)
+        break    
